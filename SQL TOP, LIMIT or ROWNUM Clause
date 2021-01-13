@@ -1,0 +1,40 @@
+SQL Server / MS Access Syntax:
+
+SELECT TOP number|percent column_name(s)
+FROM table_name
+WHERE condition;
+
+MySQL Syntax:
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+LIMIT number;
+
+Oracle Syntax:
+
+SELECT column_name(s)
+FROM table_name
+WHERE ROWNUM <= number;
+
+Example
+SELECT TOP 3 * FROM Customers;
+
+SELECT * FROM Customers
+LIMIT 3;
+
+SELECT * FROM Customers
+WHERE ROWNUM <= 3;
+
+SELECT TOP 50 PERCENT * FROM Customers;
+
+ADD WHEE CLAUSE
+SELECT TOP 3 * FROM Customers
+WHERE Country='Germany';
+
+SELECT * FROM Customers
+WHERE Country='Germany'
+LIMIT 3;
+
+SELECT * FROM Customers
+WHERE Country='Germany' AND ROWNUM <= 3;
